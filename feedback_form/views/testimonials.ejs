@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= title %></title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>All Testimonials</h1>
+        <div class="nav-links">
+            <a href="/">Submit Your Own Feedback</a>
+        </div>
+
+        <div class="testimonials-grid">
+            <% if (testimonials.length > 0) { %>
+                <% testimonials.forEach(testimonial => { %>
+                    <div class="testimonial-card">
+                        <p class="message">"<%= testimonial.message %>"</p>
+                        <p class="name">- <%= testimonial.name %></p>
+                        <p class="rating">Rating: <%= '★'.repeat(testimonial.rating) %><span class="dimmed"><%= '★'.repeat(5 - testimonial.rating) %></span></p>
+                        <a href="/testimonial/<%= testimonial._id %>" class="share-link">View & Share</a>
+                    </div>
+                <% }) %>
+            <% } else { %>
+                <p>No testimonials yet. Be the first to submit one!</p>
+            <% } %>
+        </div>
+    </div>
+</body>
+</html>

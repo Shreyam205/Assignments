@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= title %></title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="single-testimonial-card">
+             <p class="message">"<%= testimonial.message %>"</p>
+             <p class="name">- <%= testimonial.name %></p>
+             <p class="rating">Rating: <%= '★'.repeat(testimonial.rating) %><span class="dimmed"><%= '★'.repeat(5 - testimonial.rating) %></span></p>
+             <p class="date">Submitted on: <%= testimonial.createdAt.toDateString() %></p>
+
+             <div class="share-section">
+                <p>Share this testimonial:</p>
+                <input type="text" value="http://localhost:3000/testimonial/<%= testimonial._id %>" readonly id="shareableLink">
+                <button onclick="copyLink()" class="btn-copy">Copy Link</button>
+             </div>
+        </div>
+         <div class="nav-links">
+            <a href="/testimonials">Back to All Testimonials</a>
+        </div>
+    </div>
+
+    <script>
+        function copyLink() {
+            const linkInput = document.getElementById('shareableLink');
+            linkInput.select();
+            linkInput.setSelectionRange(0, 99999); 
+            document.execCommand('copy');
+            alert('Link copied to clipboard!');
+        }
+    </script>
+</body>
+</html>

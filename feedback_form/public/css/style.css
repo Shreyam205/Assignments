@@ -1,0 +1,184 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap');
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #f4f7f6;
+    color: #333;
+    margin: 0;
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+}
+
+.container {
+    width: 100%;
+    max-width: 800px;
+    background-color: #ffffff;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.05);
+}
+
+h1 {
+    color: #2c3e50;
+    text-align: center;
+    margin-bottom: 0.5rem;
+}
+
+p {
+    text-align: center;
+    color: #7f8c8d;
+    margin-bottom: 2rem;
+}
+
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    color: #34495e;
+}
+
+input[type="text"],
+input[type="number"],
+textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #bdc3c7;
+    border-radius: 8px;
+    font-size: 1rem;
+    box-sizing: border-box;
+    transition: border-color 0.3s;
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus,
+textarea:focus {
+    outline: none;
+    border-color: #3498db;
+}
+
+textarea {
+    resize: vertical;
+}
+
+.btn {
+    display: block;
+    width: 100%;
+    padding: 0.85rem;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #2980b9;
+}
+
+/* Testimonials Grid */
+.testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.testimonial-card, .single-testimonial-card {
+    background-color: #ecf0f1;
+    padding: 1.5rem;
+    border-radius: 8px;
+    border-left: 5px solid #3498db;
+    text-align: left;
+}
+
+.single-testimonial-card {
+    max-width: 600px;
+    margin: 2rem auto;
+}
+
+.testimonial-card .message, .single-testimonial-card .message {
+    font-style: italic;
+    color: #34495e;
+    text-align: left;
+    margin-bottom: 1rem;
+}
+
+.testimonial-card .name, .single-testimonial-card .name {
+    font-weight: 700;
+    color: #2c3e50;
+    text-align: right;
+    margin-bottom: 1rem;
+}
+
+.testimonial-card .rating, .single-testimonial-card .rating {
+    color: #f1c40f;
+    text-align: right;
+    font-size: 1.2rem;
+}
+
+.rating .dimmed {
+    color: #bdc3c7;
+}
+
+.nav-links {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.nav-links a {
+    color: #3498db;
+    text-decoration: none;
+    font-weight: 500;
+}
+.nav-links a:hover {
+    text-decoration: underline;
+}
+
+.share-link {
+    display: inline-block;
+    margin-top: 1rem;
+    font-size: 0.9rem;
+    color: #3498db;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.share-section {
+    margin-top: 2rem;
+    border-top: 1px solid #ddd;
+    padding-top: 1.5rem;
+}
+
+.share-section p {
+    text-align: left;
+    margin-bottom: 0.5rem;
+}
+
+#shareableLink {
+    width: calc(100% - 110px);
+}
+
+.btn-copy {
+    width: 100px;
+    padding: 0.75rem;
+    background-color: #2ecc71;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+.btn-copy:hover {
+    background-color: #27ae60;
+}
