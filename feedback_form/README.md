@@ -15,8 +15,8 @@ A simple web application for submitting and displaying testimonials.
    npm install
    ```
 3. Configure Environment Variables:
-Create a file named - .env in the root of your project directory. This file will store your MongoDB connection string.
-Add the following line to your - .env file, replacing - <your_mongodb_connection_string> with your actual MongoDB connection string:
+Create a file named .env in the root of your project directory. This file will store your MongoDB connection string.
+Add the following line to your .env file, replacing <your_mongodb_connection_string> with your actual MongoDB connection string:
    ```bash
    MONGODB_URI=<your_mongodb_connection_string>
    ```
